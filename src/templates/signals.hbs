@@ -1,5 +1,5 @@
 <div class="alert alert-info">
-    señales disponibles
+    {{signals.length}} señales disponibles
 </div>
 
 <div class="row">
@@ -11,7 +11,7 @@
                 <div class="row">
                     <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2">
                         <div class="b-signal__image">
-                            <img class="img-responsive" src="http://projects-api.webtraining.zone/traffic-signals-images/sct/{{filename}}"
+                            <img class="lazy img-responsive" data-src="http://projects-api.webtraining.zone/traffic-signals-images/sct/{{filename}}"
                                  alt="{{name}}">
                         </div>
                     </div>

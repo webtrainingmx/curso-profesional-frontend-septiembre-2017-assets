@@ -30,6 +30,8 @@
 				// Render to DOM
 				renderSignals( components.signalsComponent.originalSignals );
 
+				enableLazyLoadingForImages();
+
 				// Activate filter
 				createFilter();
 			} );
@@ -54,6 +56,17 @@
 			} );
 		}
 
+		function enableLazyLoadingForImages() {
+			$( '.lazy' ).lazy( {
+				scrollDirection: 'vertical',
+				effect: 'fadeIn',
+				visibleOnly: true,
+				onError: function( element ) {
+					console.log( 'error loading' + element.data( 'src' ) );
+				}
+			} )
+		}
+
 		function createFilter() {
 
 			var $items = $componentContent.find( 'div.b-signal' );
@@ -65,6 +78,8 @@
 
 				var filteredSignals = filterSignals( searchTerm );
 				renderSignals( filteredSignals );
+
+
 
 			} );
 		}

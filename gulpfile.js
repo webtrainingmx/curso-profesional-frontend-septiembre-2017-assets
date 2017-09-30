@@ -7,6 +7,8 @@ const cleanCSS = require( 'gulp-clean-css' );
 const watch = require( 'gulp-watch' );
 const util = require( 'util' );
 const fileinclude = require( 'gulp-file-include' );
+const uglify = require( 'gulp-uglify' );
+const concat = require( 'gulp-concat' );
 
 gulp.task( 'sass', () => {
 	return gulp.src( './src/scss/main.scss' )
@@ -15,6 +17,19 @@ gulp.task( 'sass', () => {
 		// .pipe( rename( 'all-styles.css' ) )
 		// .pipe( sourcemaps.write() )
 		.pipe( gulp.dest( './dist/css' ) );
+} );
+
+const jsDir = './src/js/app/';
+
+gulp.task( 'minify-js', () => {
+	return gulp.src( [
+		jsDir + 'navigation.js',
+		jsDir + 'senales.js',
+	] ).pipe( concat( 'all-scripts.js' ) )
+		.pipe( gulp.dest( './dist/js' ) )
+		.pipe( rename( 'all-scripts.min.js' ) )
+		.pipe( uglify() )
+		.pipe( gulp.dest( './dist/js' ) );
 } );
 
 gulp.task( 'watch', () => {
