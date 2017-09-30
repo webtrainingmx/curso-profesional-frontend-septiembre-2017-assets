@@ -2,7 +2,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   margin: 0;
-  color: #f4eee9; }
+  color: #134279; }
 
 h1 {
   font-family: 'Asap Condensed', sans-serif; }
@@ -39,6 +39,9 @@ p {
     display: block;
     padding: 14px 20px;
     font-size: 15px; }
+    .b-main-navigation__link.is-active {
+      background-color: #133762;
+      color: white; }
     .b-main-navigation__link:hover {
       background: #174377;
       text-decoration: none;
@@ -61,3 +64,27 @@ p {
   padding: 100px 0; }
   .b-section--learn-signals {
     background-color: #f4eee9; }
+
+.b-main-footer {
+  height: 60px;
+  background-color: #174377; }
+
+.b-signal {
+  min-height: 240px;
+  margin-bottom: 20px;
+  border: 1px solid #c6d6e9;
+  background-color: #eaf0f7; }
+  .b-signal__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 20px;
+    background-color: #c6d6e9;
+    color: #174377; }
+  .b-signal__image {
+    padding: 20px 0 20px 20px; }
+  .b-signal__description {
+    padding: 20px 20px 20px 0; }
+
+.b-search {
+  margin-bottom: 20px; }

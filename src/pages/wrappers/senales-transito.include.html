@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        @@include('./../elements/head.partial.html')
+    </head>
+    <body>
+        @@include('./../elements/header.partial.html')
+
+        <!-- START: Content -->
+        <div class="b-main-content">
+
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-xs-12">
+                        <h1>Señales de tránsito</h1>
+                    </div>
+
+                    <div class="col-xs-12">
+                        <div class="b-search">
+                            <div class="input-group">
+                                <input id="js-filter"
+                                       class="form-control"
+                                       placeholder="Filtrar por nombre..."
+                                       type="text">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-info">
+                                        <span class="glyphicon glyphicon-search"></span>
+                                    </button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div id="js-content" data-slug="senales-transito">
+                    <div class="sk-rotating-plane"></div>
+                </div>
+            </div>
+        </div>
+        <!-- END: Content -->
+        @@include('./../elements/footer.partial.html')
+        @@include('./../elements/bottom-scripts.partial.html')
+    </body>
+</html>

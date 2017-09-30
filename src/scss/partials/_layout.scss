@@ -30,6 +30,11 @@
 		padding: 14px 20px;
 		font-size: 15px;
 
+		&.is-active {
+			background-color: darken($color-primary, 5%);
+			color: white;
+		}
+
 		&:hover {
 			background: #174377;
 			text-decoration: none;
@@ -64,3 +69,11 @@
 
 }
 
+.b-main-footer {
+	height: 60px;
+	background-color: $color-primary;
+	//position: absolute;
+	//right:0 ;
+	//bottom: 0;
+	//left: 0;
+}

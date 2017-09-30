@@ -1,0 +1,27 @@
+.b-signal {
+	min-height: 240px;
+	margin-bottom: 20px;
+	border: 1px solid darken($color-primary-light, 5%);
+	background-color: lighten($color-primary-light, 5%);
+
+	&__title {
+		margin: 0;
+		font-size: 18px;
+		font-weight: bold;
+		padding: 20px;
+		background-color: darken($color-primary-light, 5%);
+		color: $color-primary;
+	}
+
+	&__image {
+		padding: 20px 0 20px 20px;
+	}
+
+	&__description {
+		padding: 20px 20px 20px 0;
+	}
+}
+
+.b-search {
+	margin-bottom: 20px;
+}

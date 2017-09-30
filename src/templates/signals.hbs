@@ -1,0 +1,31 @@
+<div class="alert alert-info">
+    señales disponibles
+</div>
+
+<div class="row">
+    {{#each signals}}
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+            <div class="b-signal">
+                <h3 class="b-signal__title">{{name}}</h3>
+
+                <div class="row">
+                    <div class="col-xs-4 col-sm-3 col-md-3 col-lg-2">
+                        <div class="b-signal__image">
+                            <img class="img-responsive" src="http://projects-api.webtraining.zone/traffic-signals-images/sct/{{filename}}"
+                                 alt="{{name}}">
+                        </div>
+                    </div>
+                    <div class="col-xs-8 col-sm-9 col-md-9 col-lg-10">
+                        <div class="b-signal__description">
+                            {{ description }}
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+    {{/each}}
+
+</div>
